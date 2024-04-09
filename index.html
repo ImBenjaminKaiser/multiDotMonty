@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </head>
+  <body class="body ignoreClickEvents">
+    <p class="hideOnStart ignoreClickEvents">
+      One dot will light up green. <br />
+      Follow it with your eyes, then click on it.<br />
+      Game ends when you lose.
+    </p>
+    <div class="start-buttons hideOnStart button-wrapper">
+      <button
+        onclick="startRound(2000, 1, 'Easy')"
+        class="hideOnStart ignoreClickEvents">
+        Easy
+      </button>
+      <button
+        onclick="startRound(1000, 0.7, 'Medium')"
+        class="hideOnStart ignoreClickEvents">
+        Medium
+      </button>
+      <button
+        onclick="startRound(500, 0.4, 'Hard')"
+        class="hideOnStart ignoreClickEvents">
+        Hard
+      </button>
+    </div>
+    <button
+      onclick="clearHighScores()"
+      class="clearButton hideOnStart ignoreClickEvents">
+      Clear High scores
+    </button>
+    <p class="warning hideOnStart ignoreClickEvents"></p>
+    <p id="dotCounter"></p>
+    <p id="scoreCounter"></p>
+    <p id="highScoreCounter"></p>
+  </body>
+</html>
